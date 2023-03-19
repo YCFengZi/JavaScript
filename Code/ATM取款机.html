@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM取款机</title>
+</head>
+<body>
+    <script>
+        let cq,qq,look,exits,gn
+        let num = 0
+        while (exits !== '退出') {
+            gn = prompt(`请选择功能
+            ①存钱
+            ②取钱
+            ③查询余额
+            ④退出`)
+            switch (gn) {
+                case '1':
+                    num += +prompt('请输入要存的钱：')
+                    alert(`当前余额为${num}`)
+                    break
+                case '2':
+                    num -= +prompt('请输入要取的钱：')
+                    alert(`当前余额为${num}`)
+                    break
+                case '3':
+                    alert(`当前余额为${num}`)
+                    break
+                case '4':
+                    let queren = prompt(`确认退出？
+                    ①确认退出
+                    ②取消退出`)
+                    switch (queren) {
+                        case '1':
+                            exits = '退出'
+                            break
+                        case '2':
+                            alert('取消成功')
+                            break
+                        default:
+                            alert('错误选项')
+                    }
+                    break
+                default:
+                    alert('错误选项')
+            }
+        }
+    </script>
+</body>
+</html>
